@@ -1,6 +1,6 @@
 ---
 applications:
-- name: tdt-documentation
+- name: prototype-kit-training
   path: build
   memory: 64M
   instances: 2
