@@ -3,6 +3,8 @@ applications:
 - name: tdt-documentation
   memory: 64M
   instances: 2
-  # buildpack: staticfile_buildpack
+  buildpack: staticfile_buildpack
+  ruby: 2.6.4
+
   routes:
-    - route: 	tdt-documentation.london.cloudapps.digital
+    - route: 	prototype-kit-training.herokuapp.com
