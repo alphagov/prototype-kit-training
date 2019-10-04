@@ -1,7 +1,6 @@
 # Prototype Kit training
 
-## Getting started with the GOV.UK Prototype Kit
-This documentation contains links to resources and documentation that are used for the GOV.UK Prototype Kit training.
+This guide contains links to resources and documentation that are used for the GOV.UK Prototype Kit training.
 
 ### Training slides
 
