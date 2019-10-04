@@ -4,7 +4,7 @@ host: https://tdt-documentation.london.cloudapps.digital/
 # Header-related options
 show_govuk_logo: true
 service_name: Prototype Kit training
-service_link:
+service_link: /
 
 # Links to show on right-hand-side of header
 # header_links:

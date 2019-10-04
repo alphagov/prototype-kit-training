@@ -2,6 +2,7 @@
 
 ## Main task
 
-Follow the tutorial on how to [show the user's answers on your 'Check your answers' page](https://govuk-prototype-kit.herokuapp.com/docs/make-first-prototype/show-users-answers).
+Follow the tutorials on: 
 
-## Stretch task
+* [showing the user's answers on your 'Check your answers' page](https://govuk-prototype-kit.herokuapp.com/docs/make-first-prototype/show-users-answers)
+* [letting the user change their answers](https://govuk-prototype-kit.herokuapp.com/docs/make-first-prototype/let-user-change-answers)
