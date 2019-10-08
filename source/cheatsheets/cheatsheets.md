@@ -1,4 +1,6 @@
-# Introduction to the command line
+# Cheatsheets
+
+## The terminal
 
 The command line is a text interface for your computer. Just like Windows
 Explorer on Windows or Finder on a Mac it lets you navigate through the files
@@ -40,7 +42,7 @@ probably in your "home" directory, and should get an output similar to this:
 
 So your current "working directory" is `/Users/your-username`.
 
-### `cd` or change directory
+#### `cd` or change directory
 
 The `cd` command allows you to move between directories. You tell `cd` which directory to move to by putting the path after the `cd`, like this:
 
@@ -88,7 +90,7 @@ Press **cmd + K** to clear your terminal. This doesn't stop a running command, i
 
 Press **tab** to autocomplete a file or folder name. You may need to press it a second time if there are no unambiguous matches.
 
-#### Getting things wrong on the command line
+### Getting things wrong on the command line
 
 If you type a command that the command line doesn't understand, it will show
 you an error message. Don't panic, if you see one of these - everything is fine!
@@ -101,3 +103,65 @@ whargleblargle
 ```
 
 You should see an error message like `-bash: whargleblargle: command not found`.
+
+## Common git commands
+
+### Create repositories
+
+Creates a new local repository with the specified name.
+
+```
+$ git init [project-name]
+```
+
+Downloads a project and its entire version history.
+
+```
+$ git clone [url]
+```
+
+### Make changes
+
+Lists all new or modified files to be committed.
+
+```
+$ git status
+```
+
+Snapshots the file in preparation for versioning.
+
+```
+$ git add [file-name]
+```
+
+Or, snapshot multiple files.
+
+```
+$ git add .
+```
+
+Records a snapshot of your file (a commit).
+
+```
+$ git commit -m"[descriptive message]"
+```
+
+### Synchronise local and remote repos
+
+Uploads all local branch commits to GitHub.
+
+```
+$ git push [remote] [branch]
+```
+
+If pushing to a master branch from a local repo (a folder on your device), you can write the above as:
+
+```
+$ git push origin master
+```
+
+Downloads history from a remote directory and incorporates the changes in your local version
+
+```
+$ git pull
+```

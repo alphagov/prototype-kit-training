@@ -34,7 +34,7 @@ github_repo: alphagov/prototype-kit-training
 enable_search: true
 
 # Ownership for page reviews
-default_owner_slack: '#docs-repos'
+default_owner_slack: '#prototype-kit'
 owner_slack_workspace: gds
 
 # Enable GOV.UK crown logo

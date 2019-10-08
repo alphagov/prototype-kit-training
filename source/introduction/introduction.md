@@ -8,3 +8,7 @@ The [current slides](https://docs.google.com/presentation/d/1pts_tHi__PTz6B6xrb5
 ) for the training are saved in Google Slides.
 
 If you're unable to access Google Drive, you can [download a pdf version]().
+
+### Give feedback
+
+If you would like to give feedback about this training to help us improve it for future attendees [please fill in this survey]().
