@@ -1,6 +1,13 @@
 # Introduction
 
-This guide contains links to resources and documentation that are used for the GOV.UK Prototype Kit training run by GDS.
+This guide contains the resources and documentation that are used by GDS for the GOV.UK Prototype Kit training.
+
+It contains:
+
++ links to the online tutorial on the GOV.UK Protoype Kit site
++ the slides used by the facilitators to run training
++ resources and cheatsheets on some of the concepts covered in training.
+
 
 ### Training slides
 
