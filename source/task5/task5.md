@@ -3,7 +3,9 @@
 To publish your prototype, you must:
 
 - push your prototype to the remote GitHub repo
-- deploy your site
+- deploy your site on Heroku
+
+For this task, we recommend using the integrated terminal that comes with Visual Studio code.
 
 ## Push prototype to GitHub
 
@@ -11,27 +13,37 @@ These instructions assume that you have prototype changes ready to push to GitHu
 
 To push your prototype changes to GitHub for the first time, you must:
 
-- create local and remote GitHub repos
-- commit all changes in the local repo
-- link the local repo to the remote repo
-- push the staged commit to the remote repo
+- **create a new repository** (remote) on GitHub
+- **initialise the local directory** as a Git repository
+- **add** and **commit** your files
+- **push the staged commits** to the remote repo
 
-### Create local and remote GitHub repos
+### Create a new repository
 
-[Create a remote empty repo](https://help.github.com/articles/create-a-repo/) in your organisation on GitHub.
+Create a remote empty repo in your organisation on GitHub by clicking the **New** in your GitHub account dashboard.
+
+To avoid errors, **do not** initialise the new repository with a README, license or gitignore files. You can add these files after your project has been pushed to GitHub.
+
+![Do not initialise readme](/images/readme.png)
+
+Make sure you make the repo **Public** so anyone can collaborate on it.
+
+When you're done, click **Create repository**.
 
 
-### Commit all changes in the local repo
+### Initialise the local directory as a Git repository
 
-1. Go to the local repo directory in the command line.
+1. Go to your juggling license prototype directory using the command line. In Visual Studio code, opening a terminal in the text editor window automatically cd you into your prototype repo.
 
-1. Make the created local repo into a Git repo:
+1. Make the prototype directory into a local Git repo:
 
     ```
     git init
     ```
 
-1. If applicable, add all files in the local repo and stage them for commit:
+### Add and commit your prototype files
+
+1. Add all files in the local repo and stage them for commit:
 
     ```
     git add .
@@ -40,34 +52,32 @@ To push your prototype changes to GitHub for the first time, you must:
 1. Commit the staged files:
 
     ```
-    git commit -m "COMMIT-MESSAGE"`
+    git commit -m "COMMIT-MESSAGE"
     ```
 
-    where `COMMIT-MESSAGE` is the message describing the commit.
+    where `COMMIT-MESSAGE` is the message describing the commit. This is your first commit to the repo so it's fine to replace `COMMIT-MESSAGE` with `first-commit`.
 
-### Link the local repo to the remote repo
 
-1. Go to the remote repo in GitHub.
+### Push the staged commits to the remote repo
+
+1. Go to the remote repo in GitHub. This is the empty repo created earlier.
 
 1. Select the __Clone or download__ button.
 
-1. Select either __Use HTTPS__ or __Use SSH__.
+1. Select __Use HTTPS__ .
 
 1. Select the copy button.
 
-1. In the command line, link the local repo to the remote repo:
+1. Back in the command line, link the local repo to the remote repo by typing:
 
     ```
     git remote add origin REMOTE-REPO-URL
     ```
 
-1. Verify the remote repo:
+    Where `REMOTE-REPO-URL` is the copied URL.
 
-    ```
-    git remote -v
-    ```
 
-### Push the staged commit to the remote repo
+### Push the changes to the remote repo
 
 Push the changes in your local repo to the remote repo:
 
@@ -75,9 +85,8 @@ Push the changes in your local repo to the remote repo:
 git push -u origin master
 ```
 
-You have now created a remote documentation repo on GitHub.
+You have now created a remote version of your prototype on GitHub. Go to the remote repo and check that all your files are there.
 
-For more information, refer to [Adding an existing project to GitHub](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
 
 ## Deploy with Heroku
 
