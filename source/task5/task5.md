@@ -18,9 +18,8 @@ To push your prototype changes to GitHub for the first time, you must:
 
 ### Create local and remote GitHub repos
 
-1. [Create a remote empty repo](https://help.github.com/articles/create-a-repo/) in your organisation on GitHub.
+[Create a remote empty repo](https://help.github.com/articles/create-a-repo/) in your organisation on GitHub.
 
-1. [Create a new local documentation repo](/create_new_project.html#create-a-new-project) if required.
 
 ### Commit all changes in the local repo
 
@@ -81,3 +80,45 @@ You have now created a remote documentation repo on GitHub.
 For more information, refer to [Adding an existing project to GitHub](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
 
 ## Deploy with Heroku
+
+Open [www.heroku.com](https://www.heroku.com/) and log in if you're not already logged in.
+
+In the top right click **New** then **Create new app**
+
+Names in Heroku have to be unique across all the users of Heroku. It can be helpful to add your name or organisation to the start of the name to make it unique. For example **yourname-juggling-prototype**
+
+Select **Europe** for the region - this is not important but makes your prototype a bit faster.
+
+For **deployment method** choose **GitHub**
+
+![Deploy Heroku app using github master branch](/images/heroku-deploy.png)
+ 
+1. Scroll down and click **Connect to GitHub**
+
+2. In the popup, click **Authorize Heroku**
+
+3. In the **repo-name** field, type all or some of your repo name, as it is on GitHub. Click **search**
+
+4. Click **connect** on the right of your repo.
+
+5. Scroll down to the **Manual deploy** section and click **Deploy branch**
+
+### Secure your prototype
+
+One more thing: we need to set a username and password or the prototype won't run online.
+
+At the top click the **Settings** tab
+
+Click **Reveal config vars**
+
+1. In **KEY** put the word USERNAME
+2. In **VALUE** put a username of your choice, click Add
+
+That will be saved and you can add another KEY and VALUE
+
+In KEY put the word PASSWORD
+In VALUE put a password of your choice, click Add
+
+![Set your app username and password](/images/config-vars.png)
+
+In the top top right, click **Open app** to see your prototype online!
