@@ -165,3 +165,5 @@ Downloads history from a remote directory and incorporates the changes in your l
 ```
 $ git pull
 ```
+
+### Create branches
