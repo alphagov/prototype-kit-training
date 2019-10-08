@@ -1,4 +1,4 @@
-# Task 3: Passing data around your prototype
+# Task 3: passing data around your prototype
 
 ## Main task
 
