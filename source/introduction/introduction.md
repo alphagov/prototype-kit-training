@@ -1,4 +1,4 @@
-# Prototype Kit training
+# Introduction
 
 This guide contains links to resources and documentation that are used for the GOV.UK Prototype Kit training run by GDS.
 

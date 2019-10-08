@@ -84,7 +84,9 @@ Press **up** and **down** on the keyboard to go through previous commands.
 
 Press **ctrl c** to cancel a running app.
 
-Press tab to autocomplete a file or folder name. You may need to press it a second time if there are no unambiguous matches.
+Press **cmd + K** to clear your terminal. This doesn't stop a running command, it just removes lines of content from view.
+
+Press **tab** to autocomplete a file or folder name. You may need to press it a second time if there are no unambiguous matches.
 
 #### Getting things wrong on the command line
 
