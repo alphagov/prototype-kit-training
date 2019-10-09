@@ -108,13 +108,15 @@ You should see an error message like `-bash: whargleblargle: command not found`.
 
 ### Create repositories
 
-Creates a new local repository with the specified name.
+A Git repository is a virtual storage of your project. It allows you to save versions of your code, which you can access when needed. 
+
+Creates a new local repository with the specified name:
 
 ```
 $ git init [project-name]
 ```
 
-Downloads a project and its entire version history.
+Downloads a project and its entire version history:
 
 ```
 $ git clone [url]
@@ -122,25 +124,25 @@ $ git clone [url]
 
 ### Make changes
 
-Lists all new or modified files to be committed.
+Lists all new or modified files to be committed:
 
 ```
 $ git status
 ```
 
-Snapshots the file in preparation for versioning.
+Snapshots the file in preparation for versioning:
 
 ```
 $ git add [file-name]
 ```
 
-Or, snapshot multiple files.
+Or, snapshot multiple files:
 
 ```
 $ git add .
 ```
 
-Records a snapshot of your file (a commit).
+Records a snapshot of your file (a commit):
 
 ```
 $ git commit -m"[descriptive message]"
@@ -148,7 +150,7 @@ $ git commit -m"[descriptive message]"
 
 ### Synchronise local and remote repos
 
-Uploads all local branch commits to GitHub.
+Uploads all local branch commits to GitHub:
 
 ```
 $ git push [remote] [branch]
@@ -160,10 +162,36 @@ If pushing to a master branch from a local repo (a folder on your device), you c
 $ git push origin master
 ```
 
-Downloads history from a remote directory and incorporates the changes in your local version
+Downloads history from a remote directory and incorporates the changes in your local version:
 
 ```
 $ git pull
 ```
 
-### Create branches
+### Branches
+
+Git branches are a pointer to a snapshot of your changes. If you want to add a new feature or fix a bug you can create a new branch to encapsulate your changes.
+
+Lists all local branches in the current repository:
+
+```
+$ git branch
+```
+
+Creates a new branch:
+
+```
+$ git branch [branch-name]
+```
+
+Switches to the specified branch and updates working directory:
+
+```
+$ git checkout [branch-name]
+```
+
+Combines the specified branch’s history into the current branch:
+
+```
+$ git merge [branch-name]
+```
