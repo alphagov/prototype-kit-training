@@ -4,10 +4,13 @@ This guide contains the resources and documentation that are used by GDS for the
 
 It contains:
 
-+ links to the online tutorial on the GOV.UK Protoype Kit site
++ links to the GOV.UK Protoype Kit online tutorial
 + the slides used by the facilitators to run training
 + resources and cheatsheets on some of the concepts covered in training.
 
+This training takes place across an entire day (usually from 10am – 4pm), with two short breaks in the morning and afternoon, and a lunch break.
+
+It is run with two facilitators and a number of helpers/volunteers.
 
 ### Training slides
 
