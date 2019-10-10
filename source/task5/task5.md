@@ -49,6 +49,12 @@ When you're done, click **Create repository**.
     git add .
     ```
 
+    You can check to see what files have been added by typing:
+
+    ```
+    git status
+    ```
+    
 1. Commit the staged files:
 
     ```

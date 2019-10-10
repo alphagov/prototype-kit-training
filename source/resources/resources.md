@@ -2,17 +2,23 @@
 
 You may find the tools and resources below useful, as you continue on your journey to learning to use the GOV.UK Prototype Kit.
 
-## Learn to code
+## HTML elements reference 
 
-This documentation, put together by GDS staff, contains tutorials that are intended to take an absolute beginner through the basics of writing code.
+This page lists all the HTML elements, which are created using tags. They are grouped by function to help you find what you have in mind easily.
 
-[Learn to code] (https://learn-to-code.london.cloudapps.digital/#learn-to-code)
+[HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 ## CSS-tricks
 
 A reference guide to many features of CSS.
 
 [CSS Almanac](https://css-tricks.com/almanac/)
+
+## Learn to code
+
+This documentation, put together by GDS staff, contains tutorials that are intended to take an absolute beginner through the basics of writing code.
+
+[Learn to code] (https://learn-to-code.london.cloudapps.digital/#learn-to-code)
 
 ## Learn Git Branching
 
