@@ -14,7 +14,6 @@ We recommend using:
 
 * [Details](https://design-system.service.gov.uk/components/details/)
 * [Inset text](https://design-system.service.gov.uk/components/inset-text/)
-* [Phase banner](https://design-system.service.gov.uk/components/phase-banner/)
 * [Warning text](https://design-system.service.gov.uk/components/warning-text/)
 
 Don't add anything that will change the overall flow or functionality of the prototype, as it will make it harder to keep up later in the training.
