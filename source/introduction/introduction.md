@@ -16,7 +16,7 @@ It is run with two facilitators and a number of helpers/volunteers.
 
 The [current slides](https://docs.google.com/presentation/d/1jMjQU5uVzmCXaWRx8Q0vMf0gChBSYgBZB0k_V6KaEFg/edit?usp=sharing) for the training are saved in Google Slides.
 
-If you're unable to access Google Drive, you can [download a pdf version]().
+If you're unable to access Google Drive, you can [download a pdf version](/introduction/intro-to-kit.pdf).
 
 ### Give feedback
 
