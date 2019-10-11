@@ -30,7 +30,7 @@ router.post('/juggling-balls-answer', function (req, res) {
   var jugglingBalls = req.session.data['juggling-balls']
 
   // Check whether the variable matches a condition
-  if (jugglingBalls == "3 or more"){
+  if (jugglingBalls == "5 or more"){
     // Send user to next page
     res.redirect('/juggling-trick')
   }
