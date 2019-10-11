@@ -26,8 +26,8 @@ Currently, the juggling-balls page sends the user directly to question 2. We’r
 ```
 router.post('/juggling-balls-answer', function (req, res) {
 
-  // Make a variable and give it the value from 'juggling-balls'
-  var jugglingBalls = req.session.data['juggling-balls']
+  // Make a variable and give it the value from 'how-many-balls'
+  var jugglingBalls = req.session.data['how-many-balls']
 
   // Check whether the variable matches a condition
   if (jugglingBalls == "3 or more"){
