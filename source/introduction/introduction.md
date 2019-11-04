@@ -20,4 +20,4 @@ If you're unable to access Google Drive, you can [download a pdf version](/intro
 
 ### Give feedback
 
-If you would like to give feedback about this training to help us improve it for future attendees [please fill in this survey](https://www.smartsurvey.co.uk/s/Octkitfeedback/).
+If you would like to give feedback about this training to help us improve it for future attendees [please fill in this survey](https://www.smartsurvey.co.uk/s/G0VW6/).
