@@ -8,7 +8,7 @@ The logic takes the answer the user has given to the first question, and dependi
 
 ## Create the ineligible page
 
-1. Make an `ineligible.html` page by copying `template-content-page.html`
+1. Make an `ineligible.html` page by copying `content.html` from `docs/views/templates` to `app/views`
 2. Update the content to tell the user why they’re ineligible.
 3. Update the back link to point at question 1
 4. Check it works by visiting `https://localhost:3000/ineligible`
