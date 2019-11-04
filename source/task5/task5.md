@@ -7,7 +7,7 @@ To publish your prototype, you must:
 
 For this task, we recommend using the integrated terminal that comes with Visual Studio code.
 
-## Push prototype to GitHub
+## Publish prototype to GitHub
 
 These instructions assume that you have prototype changes ready to push to GitHub.
 
@@ -82,9 +82,6 @@ When you're done, click **Create repository**.
 
     Where `REMOTE-REPO-URL` is the copied URL.
 
-
-### Push the changes to the remote repo
-
 Push the changes in your local repo to the remote repo:
 
 ```
@@ -93,6 +90,59 @@ git push -u origin master
 
 You have now created a remote version of your prototype on GitHub. Go to the remote repo and check that all your files are there.
 
+> Accounts with two-factor authentication (2FA) will not be able to push commits first time and will need to generate a _personal access token_.
+
+## GitHub and 2FA
+
+If your GitHub account has 2FA turned on, you might need to create a personal access token in order to push your first commit to a remote repo.
+
+In the terminal, you'll be asked for your ```username``` and ```password```. Your ```username``` will be the same one used to log into your GitHub account.
+
+Your ```password``` will be a __personal access token__ created from within your GitHub account.
+
+1. In the upper-right corner of any page, click your profile photo, then click __Settings__.
+<br>
+<br>
+![Click settings menu item](/images/github-settings.png)
+
+2. In the left sidebar, click __Developer settings__.
+<br>
+<br>
+![Click developer settings menu item](/images/dev-settings.png)
+
+3. In the left sidebar, click __Personal access tokens__.
+<br>
+<br>
+![Click personal access tokens](/images/personal-access-tokens.png)
+
+4. Click __Generate new token__
+<br>
+<br>
+![Click generate new token](/images/generate-token.png)
+<br>
+<br>
+You may be asked for your account password at this point.
+
+5. Give your token a name and select the __repo__ checkbox. This gives you full access to private and public repositories from within the command line.
+<br>
+<br>
+![Click generate new token](/images/new-pat.png)
+<br>
+<br>
+Click the __Generate token__ button once you're done.
+
+6. To use the token, click the __copy__ icon to copy the token to your clipboard. Save this somewhere safe; once you navigate away from the page you will no longer be able to view it.
+<br>
+<br>
+![Click generate new token](/images/copy-token.png)
+
+You can now use the token in the command line to perform git operations.
+
+```
+$ git clone https://github.com/username/repo.git
+Username: your_username
+Password: your_token
+```
 
 ## Deploy with Heroku
 
