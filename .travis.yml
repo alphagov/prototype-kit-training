@@ -1,3 +1,22 @@
 language: ruby
 cache: bundler
 script: bundle exec middleman build
+
+# Install CloudFoundry CLI tools
+before_deploy:
+  - wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+  - echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+  - sudo apt-get update
+  - sudo apt-get install -y cf-cli
+
+# We use a script rather than using Travis' built in CloudFoundry provider
+# because it does not support zero downtime deploys
+# (https://github.com/travis-ci/dpl/pull/610)
+deploy:
+  provider: script
+  script: "./bin/deploy-travis"
+  # We build the site as part of the build, so we want to keep it so it can be
+  # deployed!
+  skip_cleanup: true
+  # on:
+  #   branch: master # 1
