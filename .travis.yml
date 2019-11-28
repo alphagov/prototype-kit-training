@@ -1,13 +1,32 @@
 language: ruby
 cache: bundler
 script: bundle exec middleman build
+
+env:
+  global:
+  # CloudFoundry credentials for deployment
+  - CF_API="https://api.cloud.service.gov.uk"
+  - CF_ORG="govuk-design-system"
+  - CF_SPACE="prototype-kit-training"
+  - CF_USERNAME="prototype-kit-docs-deploy-production@digital.cabinet-office.gov.uk"
+  # CF_PASSWORD
+  - secure: "hmjbvD5LHxIrnQ+Zsr44wS8j279nCx6Sc/KRsQxjLMN8oYSnYRxIcvYBoDvduq6n/rzCeaCK+hwS2v4y6ZyHwDGFD5YggyZn6oEbKdd7u5D5XXlL+6aLHhTASV1PQD3lBpw0s7u5gxpwZWyy7w5AdLeYXJ06Xx7ZkjwfRQ7z8i0PWIIjEJDi1LUii8oJmkk4GPg29zDerEpTm6+QLvpIhHmvGrOzdFnRhl5V/AE2EoaXhQVeWuO0Y3HRWG0Ys0IL5YhCdADJzxCEBnbYm6uprci0X5b6JTXEmERPKmVr4scZs2a2mC7cd4jsUjvymjLV7x8XtkMSLn3cVG2t5N5/PCl1HtvnypQ2HANe0KRYdlP27jvoVwWe2C5bJrspI8oE+aEEKv1oCElQbvmGkXn1pdJxuILT4XCZGy3XrNDCo5L92A1rxYdmNcMMr+hS1O+UPXCeXisZN86WB9HDUSki2njSbJ1KwsDBSgVWpBMXVDGoibhO7WPNAqQ4JsLISvGc7cKMIZ3b+ypKybDO1rm/MWT+vEhNnNIAGKTh45tlUjf+RlisQTItTvU0blrvwmr32+43ZCGwhrA6XB/LdAq2JfMg1hnrb2xEs2282vGuPSNIQEx7FImv7Hu/q38FwWDsyOZqiyEgSSCL4m3zPyWgmbwLrXOucIaX8oU/R4j45qA="
+
+# Install CloudFoundry CLI tools
+before_deploy:
+  - wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+  - echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+  - sudo apt-get update
+  - sudo apt-get install -y cf-cli
+
+# We use a script rather than using Travis' built in CloudFoundry provider
+# because it does not support zero downtime deploys
+# (https://github.com/travis-ci/dpl/pull/610)
 deploy:
-  provider: cloudfoundry
-  api: https://api.london.cloud.service.gov.uk
-  username: tech-doc-tool+paas-bot@digital.cabinet-office.gov.uk
-  password:
-    secure: uKoygsVHxzEUD/cSLRy+pX3WFkuxKZAsCXWUX5wm9SaK7WIlP7N/iHz9fDpYwNRUtoUJBZ+YMT7vFxQj5qUwlfEpV/MWE1xGmD4z3zSvSB4jDu0o2CZz+Bfjtlibv1N1Ry10Ui436Rd3rtWrbb08o7aXVXj+JMnIv2Aw5F6qDk/qhdpgoAVOFzkJ7dOCML03Zuau0UK/Oy+8iKLdFIjfjsgb0S9taFipmWSb6swax0Gwks8zR/R5S1X5ezbkyABHDtzbisKVc+wdTw1nsliEjAJubc/sxiRVDOCPHzghV2IXas60x6PG7ynhHjM9LO8CmtZCK6ieOkPIFEYPlCS4RO4v4PwbblGhvlhXkyM+90h8YTVmpzYJy8J0vCSRmphvzmGFH5SjOMt8r4aLy3DNeeq1QvZAaEVZ2IpvEYqKyjoKZAsyGvnjflZmtbkLoxncCgi/rbQ6FgWPhNqj0TnjWKl2chls0031ClYLbz2KOCZzclnynfhq4ejyvdqm6pXTDN6bu0OJuJOYPZgaRsVdxik/EoOqr8Dtd57y0lQd8eh3KPyYZJMbg1Wbdz6rpoCzqpP95G3/wLUjE8e2qOjgmFJKcRLfZyg4oIU/5a8YV5ng0B58Km0iVk09wwgHFci52mAY8daxgzj2VlIy1W9ES3AxW7OBYhWkFa/xnV3L7Gg=
-  organization: gds-tech-writers
-  space: sandbox
+  provider: script
+  script: "./bin/deploy-travis"
+  # We build the site as part of the build, so we want to keep it so it can be
+  # deployed!
+  skip_cleanup: true
   on:
-    repo: alphagov/tdt-documentation
+    branch: master
