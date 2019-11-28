@@ -1,10 +1,10 @@
 ---
 applications:
-- name: prototype-kit-training-test
+- name: prototype-kit-training
   path: build
   memory: 64M
   instances: 2
   buildpack: staticfile_buildpack
 
   routes:
-    - route: prototype-kit-training-test.cloudapps.digital
+    - route: prototype-kit-training.cloudapps.digital
