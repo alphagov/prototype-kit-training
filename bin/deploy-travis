@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 set -x
-cf
+
+cf api $CF_API
+cf auth # uses CF_USERNAME / CF_PASSWORD from environment
+cf target -o $CF_ORG -s $CF_SPACE

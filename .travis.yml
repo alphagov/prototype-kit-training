@@ -2,6 +2,16 @@ language: ruby
 cache: bundler
 script: bundle exec middleman build
 
+env:
+  global:
+  # CloudFoundry credentials for deployment
+  - CF_API="https://api.cloud.service.gov.uk"
+  - CF_ORG="govuk-design-system"
+  - CF_SPACE="prototype-kit-training"
+  - CF_USERNAME="prototype-kit-docs-deploy-production@digital.cabinet-office.gov.uk"
+  # CF_PASSWORD
+  - secure: "hmjbvD5LHxIrnQ+Zsr44wS8j279nCx6Sc/KRsQxjLMN8oYSnYRxIcvYBoDvduq6n/rzCeaCK+hwS2v4y6ZyHwDGFD5YggyZn6oEbKdd7u5D5XXlL+6aLHhTASV1PQD3lBpw0s7u5gxpwZWyy7w5AdLeYXJ06Xx7ZkjwfRQ7z8i0PWIIjEJDi1LUii8oJmkk4GPg29zDerEpTm6+QLvpIhHmvGrOzdFnRhl5V/AE2EoaXhQVeWuO0Y3HRWG0Ys0IL5YhCdADJzxCEBnbYm6uprci0X5b6JTXEmERPKmVr4scZs2a2mC7cd4jsUjvymjLV7x8XtkMSLn3cVG2t5N5/PCl1HtvnypQ2HANe0KRYdlP27jvoVwWe2C5bJrspI8oE+aEEKv1oCElQbvmGkXn1pdJxuILT4XCZGy3XrNDCo5L92A1rxYdmNcMMr+hS1O+UPXCeXisZN86WB9HDUSki2njSbJ1KwsDBSgVWpBMXVDGoibhO7WPNAqQ4JsLISvGc7cKMIZ3b+ypKybDO1rm/MWT+vEhNnNIAGKTh45tlUjf+RlisQTItTvU0blrvwmr32+43ZCGwhrA6XB/LdAq2JfMg1hnrb2xEs2282vGuPSNIQEx7FImv7Hu/q38FwWDsyOZqiyEgSSCL4m3zPyWgmbwLrXOucIaX8oU/R4j45qA="
+
 # Install CloudFoundry CLI tools
 before_deploy:
   - wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
