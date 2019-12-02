@@ -12,12 +12,12 @@ This training takes place across an entire day (usually from 10am – 4pm), with
 
 It is run with two facilitators and a number of helpers/volunteers.
 
-### Training slides
+## Training slides
 
 The [current slides](https://docs.google.com/presentation/d/1jMjQU5uVzmCXaWRx8Q0vMf0gChBSYgBZB0k_V6KaEFg/edit?usp=sharing) for the training are saved in Google Slides.
 
 If you're unable to access Google Drive, you can [download a pdf version](/introduction/intro-to-kit.pdf).
 
-### Give feedback
+## Give feedback
 
 If you would like to give feedback about this training to help us improve it for future attendees [please fill in this survey](https://www.smartsurvey.co.uk/s/G0VW6/).
