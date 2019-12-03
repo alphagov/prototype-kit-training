@@ -18,7 +18,7 @@ service_link: /
 max_toc_heading_level: 2
 
 # Tracking ID from Google Analytics (e.g. UA-XXXX-Y)
-ga_tracking_id: UA-86101042-3
+# ga_tracking_id: UA-XXXX-Y
 
 google_site_verification: "IJ5HOXpZrISM6la-YO_iX0rBUC5YFftpexygcKLsNs4"
 
