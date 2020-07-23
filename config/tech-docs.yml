@@ -41,3 +41,4 @@ show_govuk_logo: false
 # Redirects
 redirects:
   /cheatsheets-files.html: /using-the-terminal-and-git.html
+  /related-resources.html: /resources.html
