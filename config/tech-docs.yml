@@ -37,3 +37,7 @@ owner_slack_workspace: gds
 
 # Enable GOV.UK crown logo
 show_govuk_logo: false
+
+# Redirects
+redirects:
+  /cheatsheets-files.html: /using-the-terminal-and-git.html
