@@ -1,8 +1,3 @@
----
-title: 'Task 3: passing data around your prototype'
-weight: 30
----
-
 # Task 3: passing data around your prototype
 
 ## Main task
@@ -14,10 +9,10 @@ Follow the tutorials on:
 
 ## Stretch task
 
-### Use some Nunjucks macros in your prototype 
+### Use some nunjucks macros in your prototype 
 
 In task 2 you added some questions to your pages. To do that you copied and pasted HTML code from the [GOV.UK Design System](https://design-system.service.gov.uk/).
 
-Now we've talked a bit about Nunjucks macros, try replacing some HTML elements with the equivalent Nunjucks code.
+Now we've talked a bit about Nunjucks macros, try replacing some HTML elements with the equivalent Nunjucks code. 
 
 A good place to start would be the radio buttons on your `juggling-balls.html` page.
