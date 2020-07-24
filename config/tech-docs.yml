@@ -3,7 +3,7 @@ host: https://tdt-documentation.london.cloudapps.digital/
 
 # Header-related options
 show_govuk_logo: true
-service_name: GOV.UK Prototype Kit training
+service_name: Prototype Kit training
 service_link: /
 
 # Links to show on right-hand-side of header
@@ -19,6 +19,8 @@ max_toc_heading_level: 2
 
 # Tracking ID from Google Analytics (e.g. UA-XXXX-Y)
 # ga_tracking_id: UA-XXXX-Y
+
+google_site_verification: "IJ5HOXpZrISM6la-YO_iX0rBUC5YFftpexygcKLsNs4"
 
 # Multi-page options
 multipage_nav: true
@@ -37,8 +39,3 @@ owner_slack_workspace: gds
 
 # Enable GOV.UK crown logo
 show_govuk_logo: false
-
-# Redirects
-redirects:
-  /cheatsheets-files.html: /using-the-terminal-and-git.html
-  /related-resources.html: /resources.html

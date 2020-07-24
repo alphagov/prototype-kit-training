@@ -1,8 +1,3 @@
----
-title: 'Task 1: adding pages and linking them together'
-weight: 10
----
-
 # Task 1: adding pages and linking them together
 
 ## Main task 
@@ -22,6 +17,7 @@ Change these links so that they go to the appropriate page.
 
 ### Link to your prototype from the index page
 
-If you go to `https://localhost:3000` you can see the default index page for the Prototype Kit.
+If you go to `localhost:3000` you can see the default index page for the prototype kit.
 
-Change the page so that it clearly links to your juggling service start page.
+Change the page so that it clearly links to your Juggling service start page.
+
