@@ -1,28 +1,32 @@
-# Cheatsheets
+---
+title: Using the terminal and git
+weight: 70
+---
+
+# Using the terminal and git
 
 ## The terminal
 
 The command line is a text interface for your computer. Just like Windows
-Explorer on Windows or Finder on a Mac it lets you navigate through the files
-and folders of your computer, but it is completely text based.
+Explorer on a PC or Finder on a Mac, it lets you navigate through the files
+and folders of your computer, but it's completely text-based.
 
-The command line can seem unfamiliar and scary, but it's really just a
+The command line can seem unfamiliar and scary, but it's really a
 different way of interacting with your computer. This tutorial only covers
-safe commands that won't do anything bad to your computer, even if you get
+safe commands that will not do anything bad to your computer, even if you get
 them wrong.
 
-*Windows users: Terminal is only available in OS X, for Windows use [Git Bash](https://git-scm.com/download/win
-)*.
+Terminal is only available in Mac OS X. For Windows, use [Git Bash](https://git-scm.com/download/win).
 
 ### Navigating around in the terminal
 
-Once you opened up your terminal you should see a window like this:
+Once you've opened your terminal you should see a window.
 
-![Screenshot of the Terminal app. The text says Last login: Sat May 18 11:08:55 on ttys002 ~$ ](/images/terminal.png)
+![Screenshot of the Terminal window. The text says 'Last login: Sat May 18 11:08:55 on ttys002 ~$'](/images/terminal.png)
 
-Don't worry if the text in yours is a little different, it doesn't matter.
+Do not worry if the text in yours is a little different. It does not matter.
 
-To run a command, just type the words and press `Enter`.
+To run a command, type the words and press `Enter`.
 
 Try running:
 
@@ -34,13 +38,13 @@ pwd
 
 The `pwd` command prints to the command line the current directory (another
 name for folder) you are in. If you just opened up your terminal, you are
-probably in your "home" directory, and should get an output similar to this:
+probably in your 'home' directory, and you should get an output similar to this:
 
-```
+```shell
 /Users/your-username
 ```
 
-So your current "working directory" is `/Users/your-username`.
+So your current 'working directory' is `/Users/your-username`.
 
 #### `cd` or change directory
 
@@ -52,146 +56,143 @@ cd Desktop
 
 This moves you into the Desktop directory.
 
-Other examples using cd include:
+You can go up a directory level:
 
 ```shell
 cd ..
 ```
 
-This takes you up a directory level.
+You can also go to your home directory.
 
 ```shell
 cd ~
 ```
 
-This takes you to your home directory.
-
-
 #### `ls` or list
 
-You might wonder "how I do know which files are in a directory?", the `ls` command can do this:
+The `ls` command lists the files in a directory:
 
 ```shell
 ls
 ```
 
-This should print a list of the files and folders inside the working
-directory. If you're in your home directory, you'll probably see directories like `Applications`, `Desktop`,
-`Documents` and `Downloads`.
+This should print a list of the files and folders inside the working directory. If you're in your home directory, you'll probably see directories like `Applications`, `Desktop`, `Documents` and `Downloads`.
 
 
 ### Terminal shortcuts
 
-Press **up** and **down** on the keyboard to go through previous commands.
+Use **Up** and **Down** to go through previous commands.
 
-Press **ctrl c** to cancel a running app.
+Select **Ctrl** and **C** together to cancel a running command.
 
-Press **cmd + K** to clear your terminal. This doesn't stop a running command, it just removes lines of content from view.
+Select **Command** and **K** together to clear your terminal. This does not stop a running command. It removes lines of content from view.
 
-Press **tab** to autocomplete a file or folder name. You may need to press it a second time if there are no unambiguous matches.
+Select **Tab** to autocomplete a file or folder name. You may need to press it a second time if there are no unambiguous matches.
 
-### Getting things wrong on the command line
+### Getting things wrong in the terminal
 
-If you type a command that the command line doesn't understand, it will show
-you an error message. Don't panic, if you see one of these - everything is fine!
-Just have a look at the command you wrote and see if you can work out what was wrong.
+If you type a command that the command line does not understand, it will show you an error message. Do not worry if you see one of these. Have a look at the command you wrote and see if you can work out what was wrong.
 
-Try this for example:
+Try the following for example:
 
 ```shell
 whargleblargle
 ```
 
-You should see an error message like `-bash: whargleblargle: command not found`.
+You should see an error message like:
+
+```shell
+-bash: whargleblargle: command not found
+```
 
 ## Common git commands
 
-### Create repositories
+### Create a repository
 
-A Git repository is a virtual storage of your project. It allows you to save versions of your code, which you can access when needed. 
+A git repository is a virtual storage of your project. It allows you to save versions of your code, which you can access when needed. 
 
-Creates a new local repository with the specified name:
+Create a new local repository with the specified name:
 
+```shell
+git init PROJECT-NAME
 ```
-$ git init [project-name]
-```
 
-Downloads a project and its entire version history:
+Download a project and its entire version history:
 
-```
-$ git clone [url]
+```shell
+git clone PROJECT-URL
 ```
 
 ### Make changes
 
-Lists all new or modified files to be committed:
+List all new or modified files to be committed:
 
-```
-$ git status
-```
-
-Snapshots the file in preparation for versioning:
-
-```
-$ git add [file-name]
+```shell
+git status
 ```
 
-Or, snapshot multiple files:
+Snapshot the file in preparation for versioning:
 
-```
-$ git add .
+```shell
+git add FILE-NAME
 ```
 
-Records a snapshot of your file (a commit):
+Snapshot multiple files:
 
+```shell
+git add .
 ```
-$ git commit -m"[descriptive message]"
+
+Record a snapshot of your file (a commit):
+
+```shell
+git commit -m MESSAGE-THAT-EXPLAINS-YOUR-COMMIT
 ```
 
 ### Synchronise local and remote repos
 
-Uploads all local branch commits to GitHub:
+Upload all local branch commits to GitHub:
 
-```
-$ git push [remote] [branch]
+```shell
+git push REMOTE-BRANCH-NAME BRANCH-NAME
 ```
 
 If pushing to a master branch from a local repo (a folder on your device), you can write the above as:
 
-```
-$ git push origin master
+```shell
+git push origin master
 ```
 
-Downloads history from a remote directory and incorporates the changes in your local version:
+Download history from a remote directory and incorporate the changes in your local version:
 
-```
-$ git pull
+```shell
+git pull
 ```
 
 ### Branches
 
-Git branches are a pointer to a snapshot of your changes. If you want to add a new feature or fix a bug you can create a new branch to encapsulate your changes.
+Git branches are a pointer to a snapshot of your changes. If you want to add a new feature or fix a bug, you can create a new branch to encapsulate your changes.
 
-Lists all local branches in the current repository:
+List all local branches in the current repository:
 
-```
-$ git branch
-```
-
-Creates a new branch:
-
-```
-$ git branch [branch-name]
+```shell
+git branch
 ```
 
-Switches to the specified branch and updates working directory:
+Create a new branch:
 
-```
-$ git checkout [branch-name]
+```shell
+git branch BRANCH-NAME
 ```
 
-Combines the specified branch’s history into the current branch:
+Switch to the specified branch and update working directory:
 
+```shell
+git checkout BRANCH-NAME
 ```
-$ git merge [branch-name]
+
+Combine the specified branch’s history into the current branch:
+
+```shell
+git merge BRANCH-NAME
 ```
