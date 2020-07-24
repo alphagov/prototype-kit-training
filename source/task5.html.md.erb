@@ -1,0 +1,185 @@
+---
+title: 'Task 5: uploading to the web'
+weight: 50
+---
+
+# Task 5: uploading to the web
+
+To publish your prototype, you must:
+
+- push your prototype to the remote GitHub repo
+- deploy your site on Heroku
+
+For this task, we recommend using the integrated terminal that comes with Visual Studio code.
+
+## Publish prototype to GitHub
+
+These instructions assume that you have prototype changes ready to push to GitHub.
+
+To push your prototype changes to GitHub for the first time, you must:
+
+- create a new repository (remote) on GitHub
+- initialise the local directory as a Git repository
+- add and commit your files
+- push the staged commits to the remote repo
+
+### Create a new repository
+
+Create a remote empty repo in your organisation on GitHub by selecting **New** in your GitHub account dashboard.
+
+Select **Public** so anyone can collaborate on your repo.
+
+To avoid errors:
+
+- do not select **Initialise this repository with a README**
+- set **Add .gitignore** to **None**
+- set **Add a licence** to **None**
+
+You can add these files after your project has been pushed to GitHub.
+
+When you're done, select **Create repository**.
+
+
+### Initialise the local directory as a Git repository
+
+1. Go to your juggling license prototype directory using the terminal. In Visual Studio code, opening a terminal in the text editor window will automatically `cd` you into your prototype repo.
+
+2. Make the prototype directory into a local Git repo:
+
+    ```shell
+    git init
+    ```
+
+### Add and commit your prototype files
+
+1. Add all the files in the local repo and stage them for commit:
+
+    ```shell
+    git add .
+    ```
+
+    You can check to see what files have been added by running:
+
+    ```shell
+    git status
+    ```
+    
+2. Commit the staged files:
+
+    ```shell
+    git commit -m "COMMIT-MESSAGE"
+    ```
+
+    `COMMIT-MESSAGE` is the message describing the commit. This is your first commit to the repo so you can replace `COMMIT-MESSAGE` with `first-commit`.
+
+
+### Push the staged commits to the remote repo
+
+1. Go to the remote repo in GitHub. This is the empty repo you created earlier.
+
+2. Select the **Code** button.
+
+3. Select the button next to the url to copy the url to your clipboard.
+
+4. Back in the terminal, link the local repo to the remote repo:
+
+    ```shell
+    git remote add origin REMOTE-REPO-URL
+    ```
+
+    `REMOTE-REPO-URL` is the url you copied.
+    
+5. Push the changes in your local repo to the remote repo:
+
+    ```shell
+    git push -u origin master
+    ```
+
+You have now created a remote version of your prototype on GitHub. Go to the remote repo and check that all your files are there.
+
+> Accounts with two-factor authentication (2FA) will not be able to push commits first time and will need to generate a personal access token.
+
+## GitHub and 2FA
+
+If your GitHub account has 2 Factor Authentication (2FA) turned on, you might need to create a personal access token to push your first commit to a remote repo.
+
+In the terminal, you'll be asked for your:
+
+- username, which will be the same one you used to log into your GitHub account
+- password, which will be a personal access token created from within your GitHub account
+
+1. Select your profile photo on any GitHub page, then select **Settings**.
+
+2. Select **Developer settings**.
+
+3. Select **Personal access tokens**.
+
+4. Select **Generate new token**.
+
+    You may be asked for your account password at this point.
+
+5. Give your token a name and select the **repo** checkbox.
+
+    This gives you full access to private and public repositories from within the command line.
+
+6. Select the **Generate token** button once you're done.
+
+7. To use the token, select the **copy** icon to copy the token to your clipboard.
+
+    Save this somewhere safe. Once you navigate away from the page you will no longer be able to view it.
+
+You can now use the token in the terminal to perform git operations:
+
+```shell
+git clone https://github.com/username/repo.git
+Username: your_username
+Password: your_token
+```
+
+## Deploy with Heroku
+
+1. Go to [www.heroku.com](Heroku) and log in if you're not already logged in.
+
+2. Select **New**, then **Create new app**.
+
+3. Choose an **App name**.
+
+    Names in Heroku have to be unique across all the users of Heroku. It can be helpful to add your name or organisation to the start of the name to make it unique. For example 'yourname-juggling-prototype'.
+
+4. Select **Europe** as the region - this is not important but makes your prototype a bit faster.
+
+5. Select **Create app**.
+ 
+6. Set **Deployment method** as **GitHub**, then select **Connect to GitHub**.
+
+7. In the popup, select **Authorize Heroku**.
+
+8. In the **repo-name** field, Type all or some of your repo name, as it is on GitHub. Select **search**.
+
+9. Select **connect** on the right of your repo.
+
+10. Scroll down to the **Manual deploy** section and select **Deploy branch**.
+
+### Secure your prototype
+
+One more thing: we need to set a username and password or the prototype will not run online.
+
+1. Select the **Settings** tab.
+
+2. Select **Reveal config vars**.
+
+3. Set **KEY** as the word `USERNAME`.
+
+4. Set **VALUE** as a username of your choice
+
+5. Select **Add**.
+
+6. Add another **KEY** and **VALUE**.
+
+7. Set **KEY** as the word `PASSWORD`.
+
+8. Set **VALUE** as a password of your choice.
+
+9. Select **Add**.
+
+You can now select **Open app** to see your prototype online.
