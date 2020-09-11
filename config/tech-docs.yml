@@ -11,6 +11,8 @@ service_link: /
 #   About: https://sites.google.com/a/digital.cabinet-office.gov.uk/gds/communities-of-practice/content/technical-writing
 #   Documentation: /
 #   Support: /
+footer_links:
+  Accessibility: /accessibility.html
 
 # Table of contents depth – how many levels to include in the table of contents.
 # If your ToC is too long, reduce this number and we'll only show higher-level
