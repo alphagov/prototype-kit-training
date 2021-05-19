@@ -4,7 +4,7 @@ before_install:
   # install Node version from .node-version
   - nvm install
   - nvm use
-script: bundle exec middleman build
+script: bundle exec middleman build --verbose
 
 env:
   global:
