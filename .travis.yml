@@ -1,5 +1,9 @@
 language: ruby
 cache: bundler
+before_install:
+  # install Node version from .node-version
+  - nvm install
+  - nvm use
 script: bundle exec middleman build
 
 env:
